@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSS Reader by Jesusmdy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="max-w-screen-xl mx-auto">
+    <h1 class="text-4xl mt-8">RSS Reader API</h1>
+    <p>
+      This is a simple RSS Reader API that allows you to get the latest news from the most popular news sites.
+    </p>
+    <section class="mt-4">
+      <h2 class="text-2xl my-4">
+        Getting started
+      </h2>
+      <ul class="flex flex-col gap-4">
+        <li class="flex flex-col gap-2">
+          <p class="font-bold text-xl uppercase">users</p>
+          <ul>
+            <li>
+              <p class="font-bold text-lg text-zinc-900">PUT /users</p>
+              <p class="text-zinc-700">Creates a new user</p>
+            </li>
+            <li>
+              <p class="font-bold text-lg text-zinc-900">GET /users (authenticated)</p>
+              <p class="text-zinc-700">Gets the authenticated user</p>
+            </li>
+          </ul>
+        </li>
+        <li class="flex flex-col gap-2">
+          <p class="font-bold text-xl uppercase">feeds</p>
+          <ul>
+            <li>
+              <p class="font-bold text-lg text-zinc-900">GET /feeds</p>
+              <p class="text-zinc-700">
+                Gets the feeds list
+              </p>
+            </li>
+            <li>
+              <p class="font-bold text-lg text-zinc-900">PUT /feeds (authenticated)</p>
+              <p class="text-zinc-700">
+                Inserts a new feed to the user's feeds list. The body must contain the following fields:
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li class="flex flex-col gap-2">
+          <p class="font-bold text-xl uppercase">feed follows</p>
+          <ul>
+            <li>
+              <p class="font-bold text-lg text-zinc-900">GET /feed-follows (authenticated)</p>
+              <p class="text-zinc-700">
+                Gets the user's feed follows list
+              </p>
+            </li>
+            <li>
+              <p class="font-bold text-lg text-zinc-900">PUT /feed-follows (authenticated)</p>
+              <p class="text-zinc-700">
+                Inserts a new feed follow to the user's feed follows list.
+              </p>
+            </li>
+            <li>
+              <p class="font-bold text-lg text-zinc-900">DELETE /feed-follows/{feedFollowId} (authenticated)</p>
+              <p class="text-zinc-700">
+                Deletes a feed follow from the user's feed follows list.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li class="flex flex-col gap-2">
+          <p class="font-bold text-xl uppercase">posts</p>
+          <ul>
+            <li>
+              <p class="font-bold text-lg text-zinc-900">GET /posts (authenticated)</p>
+              <p class="text-zinc-700">
+                Gets the user's followed feed posts list
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
